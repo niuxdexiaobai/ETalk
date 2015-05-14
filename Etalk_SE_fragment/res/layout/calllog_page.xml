@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@android:id/tabhost" >
+    
+        <LinearLayout
+	    android:layout_height="match_parent"
+	    android:layout_width="match_parent"
+	    android:orientation="vertical">
+	    <TabWidget 
+		    android:id="@android:id/tabs"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:visibility="gone"
+        	/>
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        >
+	        <RadioGroup 
+	                android:id="@+id/main_tab"
+	                android:layout_height="fill_parent"
+	                android:layout_width="fill_parent"
+	                android:orientation="horizontal"
+	                >
+	                <LinearLayout 
+	                	android:gravity="center"
+	                    android:id="@+id/callrecords"
+	                    android:layout_width="0dp"
+	                    android:layout_height="wrap_content"
+	                    android:layout_weight="1"
+	                    >
+	                    <TextView 
+	                        android:id="@+id/callrecords_btn"
+	                        android:text="@string/tv_contacts_btn"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:layout_margin="8dp"
+	                        />
+	                </LinearLayout>
+	                <LinearLayout 
+	                    android:gravity="center"
+	                    android:id="@+id/favoritesrecords"
+	                    android:layout_width="0dp"
+	                    android:layout_height="wrap_content"
+	                    android:layout_weight="1"
+	                    >
+	                    <TextView 
+	                        android:id="@+id/favoritesrecords_btn"
+	                        android:text="@string/tv_favoritescontacts_btn"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:layout_margin="8dp"
+	                        />
+	                </LinearLayout>
+            	</RadioGroup>
+            	
+            	</LinearLayout>
+            	
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:background="@drawable/maintab_toolbar_bg"
+	        >
+    </LinearLayout>
+    
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical"
+	    >
+	    <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_weight="6"
+			>
+         </FrameLayout> <!-- -->
+     
+     </LinearLayout>
+     
+	</LinearLayout>
+
+</TabHost>

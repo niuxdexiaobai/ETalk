@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalllogDetailActivity" >
+    <!-- 标题栏 -->
+    <RelativeLayout
+        android:id="@+id/calllog_detail_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/shape_global_titlebar_backgroud" >
+
+        <!-- <ImageButton
+            android:id="@+id/calllog_detail_back"
+            android:layout_width="@dimen/global_titlebar_imgbtn_width"
+            android:layout_height="@dimen/global_titlebar_commonbtn_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/global_titlebar_btnhorizontal_margin"
+            android:src="@drawable/global_titlebar_back"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/contentdesc_calllog" />  -->
+
+        <TextView
+            android:id="@+id/calllog_tv_title"
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="通话记录"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+        <!-- <ImageButton
+            android:id="@+id/calllog_detail_menu"
+            android:layout_width="@dimen/global_titlebar_imgbtn_width"
+            android:layout_height="@dimen/global_titlebar_commonbtn_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/global_titlebar_btnhorizontal_margin"
+            android:src="@drawable/global_titlebar_menu"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/contentdesc_calllog" /> -->
+    </RelativeLayout>
+    
+    <!-- 联系人信息 -->
+    <RelativeLayout 
+        android:id="@+id/calllog_detail_item_contactbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calllog_detail_titlebar"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp">
+        <RelativeLayout
+            android:id="@+id/calllog_detail_item_photo_frame"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" >
+
+            <!-- 用于放置无头像联系人的名字（智能头像） -->
+
+            <TextView
+                android:id="@+id/calllog_detail_item_photo_smart"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:textColor="#FFFFFF"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+        </RelativeLayout>
+        <TextView 
+            android:id="@+id/calllog_detail_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/calllog_detail_item_photo_frame"
+            android:layout_toRightOf="@id/calllog_detail_item_photo_frame"/>
+        <TextView 
+            android:id="@+id/calllog_detail_item_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/calllog_detail_item_photo_frame"
+            android:layout_toRightOf="@id/calllog_detail_item_photo_frame"/>
+    </RelativeLayout>
+	<LinearLayout 
+	    android:id="@+id/calllog_detail_item_operationbar"
+	    android:layout_width="match_parent"
+	    android:layout_height="60dp"
+	    android:layout_alignParentBottom="true"
+	    android:baselineAligned="false"
+	    android:orientation="horizontal">
+        <RelativeLayout
+            android:id="@+id/calllog_detail_item_call"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+	            android:gravity="center"
+	            android:text="呼叫"
+	            android:drawableLeft="@drawable/call48"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/calllog_detail_item_msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+	            android:gravity="center"
+	            android:text="短信"
+	            android:drawableLeft="@drawable/sms48"/>
+        </RelativeLayout>
+	</LinearLayout>
+	
+    <!-- 显示通话列表 -->
+    <ListView 
+        android:id="@+id/calllog_detail_item_listview"
+        android:layout_below="@id/calllog_detail_item_contactbar"
+        android:layout_above="@id/calllog_detail_item_contactbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        ></ListView>
+</RelativeLayout>

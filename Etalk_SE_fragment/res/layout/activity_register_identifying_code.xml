@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout 
+        android:layout_height="50dp"
+        android:layout_width="fill_parent"
+        >
+        <TextView 
+            android:gravity="center"
+        	android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:text="@string/tv_identifying_code"
+            />
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+        >
+    <EditText
+        android:id="@+id/password"
+        android:layout_weight="1"
+        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:inputType="textPassword"
+        android:padding="5dp"
+        android:hint="@string/tv_identifying_code"
+        android:background="@drawable/register_phone_bg"/>
+    <Button 
+        android:layout_weight="2"
+        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:text="@string/btn_send_identifying_code"
+        />
+    
+    </LinearLayout>
+    <Button 
+        android:id="@+id/register_complete"
+        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/login_btn"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:text="@string/btn_Submit"/>
+
+</LinearLayout>

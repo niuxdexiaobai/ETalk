@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/filterLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:paddingLeft="10dip" >
+
+    <LinearLayout
+        android:paddingLeft="15dip"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:gravity="left|center" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             >
+
+        <TextView
+            android:id="@+id/name"
+            android:gravity="left|center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="22sp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#060606" >
+        </TextView>
+
+        <TextView
+            android:gravity="left|center"
+            android:layout_toRightOf="@+id/name"
+            android:id="@+id/pinyin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall" >
+        </TextView>
+        
+        <TextView
+            android:gravity="left|center"
+            android:paddingLeft="10dp"
+            android:layout_toRightOf="@+id/pinyin"
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall" >
+        </TextView>
+		</RelativeLayout>
+    </LinearLayout>
+
+    <!-- <TextView
+        android:id="@+id/call_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/ic_calllog_call_btn" /> 
+
+    <ImageView
+        android:id="@+id/fg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/call_btn"
+        android:background="@drawable/black_bg" />  -->
+
+</RelativeLayout>

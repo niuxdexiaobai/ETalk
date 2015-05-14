@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 定义标题栏的渐变色 -->
+    <gradient android:startColor="#353535" android:endColor="#1B1B1B" android:angle="270"/>
+</shape>
