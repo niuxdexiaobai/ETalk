@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 	
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/relativeLayout1"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:gravity="center"
+	android:padding="5dp">
+    
+    <QuickContactBadge 
+    	android:id="@+id/photo_view"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="fitCenter"
+        android:padding="2dp"
+        android:background="@drawable/bg_round_photo"
+        android:src="@drawable/btn_head"
+        android:visibility="visible"
+    	android:layout_alignParentTop="true" 
+    	android:layout_centerHorizontal="true">
+    </QuickContactBadge>
+    
+	<TextView 
+		android:text="TextView" 
+		android:id="@+id/textView1" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/photo_view" 
+		android:layout_marginTop="2dp"
+		android:layout_centerHorizontal="true"
+		android:gravity="center"
+		android:singleLine="true"
+		android:textColor="#000000"
+		android:textSize="18sp"
+		android:ellipsize="marquee"></TextView>
+	
+	
+</RelativeLayout>

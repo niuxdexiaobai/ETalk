@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    
+    <color name="letter_bg_color">#1C86EE</color>
+    
+    <color name="white">#FFFFFF</color>
+    <color name="blue">#00AED6</color>
+    <color name="popup_title_color">#ffc9cdd1</color>
+    <color name="advance_setting_item_bg">#fff8f8f8</color>
+    <color name="light_blue">#33b5e5</color>
+    <color name="black">#000000</color>
+    <color name="green">#23ac38</color>
+    <color name="gray">#707070</color>
+    <color name="Green">#74C741</color>
+    
+    <!-- In-call UI -->
+    <!-- <color name="incall_textConnected">#99CE3F</color>  green -->
+    <color name="incall_textConnected">#40CEA3</color>
+    
+    <color name="incall_textEnded">#FF6072</color> <!-- red -->
+    <color name="incall_textOnHold">#FF9524</color> <!-- orange -->
+    
+    <!-- DTMF Dialer -->
+    <color name="dtmf_dialer_background">#333333</color> <!-- green -->
+
+    <color name="recording_time_elapsed_text">#FFFFFFFF</color>
+    <color name="recording_time_remaining_text">#FFFF0033</color>
+    
+    <color name="quick_call_main_bg_color">#ff1f1f24</color>
+    <color name="devide_line">#CBCED2</color>
+    <color name="transparent_half">#90000000</color>
+    
+    <color name="contact_info_bg">#fff0f0f0</color>
+    <color name="top_bar_color">#ff1f1f24</color>
+    <color name="white_color">#ffffffff</color>
+    <color name="home_text_deep_color">#ff373737</color>
+    <color name="home_text_light_color">#ff808080</color>
+    <color name="gray_color">#ff808080</color>
+    <color name="black_color">#ff000000</color>
+    <color name="home_popup_nor_color">#ff808080</color>
+    <color name="home_popup_pressed_color">#ffffffff</color>
+    
+    <color name="home_bottom_button_color_pressed">#ff27aae0</color>
+    <color name="home_bottom_button_color_nor">#ff808080</color>
+</resources>

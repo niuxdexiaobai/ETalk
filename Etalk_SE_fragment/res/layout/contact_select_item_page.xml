@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"   
+	android:focusableInTouchMode="true"
+	android:background="#EDEDED" >
+    
+    <LinearLayout 
+	        android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+        	android:layout_height="50dp"
+        	android:orientation="horizontal"
+            >
+        <ImageView 
+            android:id="@+id/dialsetting"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/more_title_seting_background"
+            />
+        <TextView 
+            android:id="@+id/top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:text="联系人"
+            android:textSize="18sp"
+            />
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/more_title_seting_background"
+            />
+        </LinearLayout>
+    
+    <com.zhy.dialtong.ClearEditText
+         android:id="@+id/filter_edit"
+	     android:layout_width="fill_parent"
+	     android:layout_height="35dp"
+	     android:paddingLeft="15dp"
+	     android:gravity="left|center"
+	     android:background="@null"
+	     android:drawableLeft="@drawable/sorlistview_search_bar_icon_normal"
+	     android:hint="  请输入关键字"
+	     android:singleLine="true"
+	     android:textSize="16dp" /> <!-- android:background="@drawable/sorlistview_search_bar_edit_selector" -->
+            	    
+	<ListView
+	     android:id="@+id/acbuwa_list"
+	     android:layout_width="match_parent"
+	     android:layout_height="match_parent"
+	     android:layout_gravity="center"
+	     android:layout_marginLeft="5dp"
+         android:layout_marginRight="30dp"
+	     android:visibility="visible" />
+	<LinearLayout
+        android:id="@+id/indexer_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:id="@+id/section_toast_layout"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_centerInParent="true"
+        android:background="@drawable/current_letter_bubble"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/section_toast_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#8E8E8E"
+            android:textSize="30sp" />
+    </RelativeLayout>
+</LinearLayout>

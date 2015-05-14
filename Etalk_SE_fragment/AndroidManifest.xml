@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zhy.dialtong"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+	<uses-feature android:name="android.hardware.location" android:required="false"/>
+	<uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+	<uses-feature android:name="android.hardware.telephony" android:required="false"/>
+	<uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <!--  -->
+    
+    <application
+        android:name="com.zhy.dialtong.fragment.dial.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/iconforios96"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+         >
+        
+        <activity
+            android:name="com.zhy.dialtong.fragment.HomePageActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" 
+            android:screenOrientation="portrait">
+             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.zhy.dialtong.fragment.RegisterScreenActivity"
+            android:launchMode="standard"
+            android:theme="@android:style/Theme.Light.NoTitleBar" 
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
+        </activity> <!--  -->
+        
+        <activity
+            android:name="com.zhy.dialtong.view.FrameActivity"
+        	android:label="@string/app_name"
+        	android:theme="@style/remove_actionbar_icon"
+             >
+         <!--   <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />  
+            </intent-filter>  -->
+        </activity>
+        <activity
+            android:name="com.zhy.dialtong.view.ContactsTabHostActivity"
+            android:label="@string/Contacts_actionbar_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhy.dialtong.fragment.DialFragment" 
+            android:label="@string/dial_actionbar_title" 
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhy.dialtong.view.RecentCallTabHostActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhy.dialtong.fragment.MoreFragment" 
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        
+        <activity android:name="com.zhy.dialtong.view.GuideScreenActivity"/>
+        <activity android:name="com.zhy.dialtong.firstenter.Registration"/>
+        <activity android:name="com.zhy.dialtong.firstenter.Login"/>
+        
+        <activity android:name="com.zhy.dialtong.fragment.recentcall.CallLogFragment"/>
+        
+        <activity android:name="com.zhy.dialtong.fragment.contacts.ContactsFragment"/>
+        <activity android:name="com.zhy.dialtong.fragment.contacts.ContactInfoActivity"/>
+        
+        <activity android:name="com.zhy.dialtong.fragment.ContactsActivity"/>
+        <activity android:name="com.zhy.dialtong.fragment.ContactsFavorActivity"/>
+        <activity android:name="com.zhy.dialtong.fragment.ConstactsDetailActivity"/>
+        <activity android:name="com.zhy.dialtong.fragment.RecentCallFragment"
+            android:label="@string/RecentCall_actionbar_title"
+            />
+        <activity android:name="com.zhy.dialtong.fragment.RecentCallFavorActivity"/>
+        <activity android:name="com.zhy.dialtong.fragment.RecentCallDetailActivity"/>
+        <activity android:name="com.zhy.dialtong.fragment.MoreWifiSettingPage"/>
+        <activity android:name="com.zhy.dialtong.fragment.WifiListActivity"/>
+        <activity android:name="com.zhy.dialtong.fragment.ConstactsImageCameraActivity"/>
+        <activity android:name="com.zhy.dialtong.fragment.ConstactsEditActivity"/>
+        <activity android:name="com.zhy.dialtong.fragment.DialShowFilterNumberActivity"/>
+        
+        <activity android:name="com.zhy.dialtong.fragment.CalllogDetailActivity">
+        <intent-filter>
+                <action android:name="org.flyingcat.phonebook.action.viewcalllogs" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            </activity>
+            
+        
+        <activity android:name="com.zhy.dialtong.sipua.ui.PSTN" android:label="@string/pstn_name"
+        	android:icon="@drawable/ic_launcher_phone">
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="sms" />
+                <data android:scheme="smsto" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.zhy.dialtong.sipua.ui.SIP" android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="sms" />
+                <data android:scheme="smsto" />
+            </intent-filter>
+
+        </activity>
+            
+        <activity android:name="com.zhy.dialtong.sipua.ui.AutoAnswer" android:label="@string/app_name"/>
+        <activity android:name="com.zhy.dialtong.sipua.ui.ChangeAccount" android:label="@string/app_name"/>
+        <activity android:name="com.zhy.dialtong.sipua.ui.SIPUri" android:label="@string/app_name"
+        		android:theme="@android:style/Theme.Dialog">
+            <intent-filter>
+                <action android:name="android.intent.action.CALL" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="sip" />
+                <data android:scheme="sipdroid" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imto" />
+                <data android:scheme="sip" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.CALL_PRIVILEGED" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="sip" />
+            </intent-filter>
+            <intent-filter>
+			    <action android:name="android.intent.action.VIEW" />
+			    <category android:name="android.intent.category.DEFAULT" />
+			    <data android:mimeType="vnd.android.cursor.item/name" />			    
+			</intent-filter>
+        </activity>
+        <activity android:name="com.zhy.dialtong.sipua.ui.Activity2" android:label="@string/app_name"
+        	android:excludeFromRecents="true" android:taskAffinity=""/>
+        <activity android:name="com.zhy.dialtong.sipua.ui.Settings" android:label="@string/app_name"
+        	android:configChanges="orientation|keyboardHidden">
+        </activity>
+        
+        <activity android:name="com.zhy.dialtong.fragment.SettingsAccount" android:label="@string/app_name"
+        	android:configChanges="orientation|keyboardHidden">
+        </activity>
+        
+        <activity
+	   android:name="com.zhy.dialtong.sipua.codecs.Codecs$CodecSettings"
+	   android:label="@string/app_name" >
+        </activity>
+        
+        <activity android:name="com.zhy.dialtong.sipua.ui.InCallScreen" android:label="@string/app_name"
+	        android:excludeFromRecents="true" android:taskAffinity=""
+	        android:launchMode="singleInstance">
+        </activity>
+        
+        <activity android:name="com.zhy.dialtong.fragment.yellowpage.YellowPage"/>
+        
+	    <receiver android:name="com.zhy.dialtong.sipua.ui.OneShotAlarm"/>
+	    <receiver android:name="com.zhy.dialtong.sipua.ui.OneShotAlarm2"/>
+	    <receiver android:name="com.zhy.dialtong.sipua.ui.LoopAlarm"/>
+	    <receiver android:name="com.zhy.dialtong.sipua.ui.OwnWifi"/>
+	    <receiver android:name="com.zhy.dialtong.sipua.ui.OneShotLocation"/>
+	    <receiver android:name="com.zhy.dialtong.sipua.ui.LoopLocation"/>
+	    <receiver android:name="com.zhy.dialtong.sipua.ui.Caller">
+	        <intent-filter android:priority="-1">
+	        	<action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+	        </intent-filter>
+	    </receiver>
+        <receiver android:name="com.zhy.dialtong.sipua.ui.Receiver" android:enabled="true">
+	      	<intent-filter>
+	        	<action android:name="android.intent.action.BOOT_COMPLETED" />
+	        	<action android:name="android.intent.action.EXTERNAL_APPLICATIONS_AVAILABLE" />
+	        	<action android:name="android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE" />
+	      	</intent-filter>
+	      	<intent-filter>
+	        	<action android:name="android.intent.action.PACKAGE_REPLACED" />
+	        	<data android:scheme="package" />
+	        	<data android:path="com.zhy.sipua.sipua" />
+	      	</intent-filter>
+	    </receiver>
+	    <receiver android:name="com.zhy.dialtong.sipua.ui.PhoneStart">
+            <intent-filter>
+                <action android:name="com.zhy.START_SIPDROID" />
+                <action android:name="com.zhy.STOP_SIPDROID" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.zhy.dialtong.sipua.ui.RegisterService" />
+        <service
+            android:name="com.zhy.dialtong.fragment.dial.T9Service" />
+        <service 
+            android:name="com.yulore.superyellowpage.service.IntelligentCacheService"
+            android:enabled="true"
+            android:exported="false"/>
+    </application>
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- 以下是使用wiFi访问网络所需的权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.UPDATE_DEVICE_STATS" />
+    <!-- 以上是使用wiFi访问网络所需的权限 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" /> 
+    
+    <uses-permission android:name="android.permission.VIBRATE" />
+    
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+	<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+	<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+	<uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+	<uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<uses-permission android:name="android.permission.BROADCAST_STICKY" />
+	<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+	
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+	<uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+</manifest>
